@@ -24,12 +24,20 @@ const UsuarioState = ({children}) => {
         })
     }
 
+    const removeFromBasket = (id) => {
+        console.log("before to delete item from basket");
+        dispatch({
+            type: 'REMOVE_FROM_BASKET',
+            payload: id
+        })
+    }
     
     return(
         <StateContext.Provider
             value={{
                 basket: state.basket,
-                addToBasketAction
+                addToBasketAction,
+                removeFromBasket
             }}
         >
             {children}

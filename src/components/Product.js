@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import StateContext from '../context/state/StateContext';
 
 import '../styles/Product.css'
-function Product({id, title, image, rating, price}) {
+function Product({id, title, image, rating, price}) { 
     
     const {basket, addToBasketAction} = useContext(StateContext);
 
@@ -12,7 +12,8 @@ function Product({id, title, image, rating, price}) {
             id, 
             title,
             image,
-            price
+            price,
+            rating
         }
         // Add item to basket
         addToBasketAction(product)
